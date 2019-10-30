@@ -11,9 +11,8 @@
             <Setter Property="Width" Value="30"/>
         </Style>
     </ContentPage.Resources>-->
-    
-    <Grid BackgroundColor="Black">
-        <!--<Image Source="https://www.bing.com/images/search?view=detailV2&id=E10EC6C7133881617FA11C26B0B80ADDCE8E3E87&thid=OIP.sp610M2mvKto5roEFbBJXQHaLH&mediaurl=http%3A%2F%2Fwww.goodtherapy.org%2Fblog%2Fblog%2Fwp-content%2Fuploads%2F2016%2F08%2FEmployee-throwing-paper-at-female-employee-800x1200.jpg&exph=1200&expw=800&q=work+employee&selectedindex=11&ajaxhist=0&vt=0&eim=1,2,6" Aspect="AspectFit" />-->
+
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
             <RowDefinition Height="4*"/>
@@ -23,9 +22,14 @@
             <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-
+        
+        
+        <Image Grid.RowSpan="2" Grid.ColumnSpan="3"
+               Source="test_background.png"
+               HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="Fill"/>
         <StackLayout Grid.Column="1" Grid.Row="1">
             <Button Text="Add Employee"/>
+            <Button Text="View Employee"/>
         </StackLayout>
     </Grid>
 
