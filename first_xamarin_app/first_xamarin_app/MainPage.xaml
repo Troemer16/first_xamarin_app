@@ -6,12 +6,6 @@
              mc:Ignorable="d"
              x:Class="first_xamarin_app.MainPage">
 
-    <!--<ContentPage.Resources>
-        <Style x:Key="ButtonStyle" TargetType="Button">
-            <Setter Property="Width" Value="30"/>
-        </Style>
-    </ContentPage.Resources>-->
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
@@ -28,8 +22,8 @@
                Source="test_background.png"
                HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="Fill"/>
         <StackLayout Grid.Column="1" Grid.Row="1">
-            <Button Text="Add Employee"/>
-            <Button Text="View Employee"/>
+            <Button Text="Add Employee" Clicked="AddRedirect"/>
+            <Button Text="View Employee" Clicked="ViewRedirect"/>
         </StackLayout>
     </Grid>
 

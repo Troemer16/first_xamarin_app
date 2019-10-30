@@ -17,5 +17,15 @@ namespace first_xamarin_app
         {
             InitializeComponent();
         }
+
+        void AddRedirect(object sender, EventArgs e)
+        {
+            (sender as Button).Text = "Add is winning";
+        }
+
+        void ViewRedirect(object sender, EventArgs e)
+        {
+            (sender as Button).Text = "View is winning";
+        }
     }
 }
