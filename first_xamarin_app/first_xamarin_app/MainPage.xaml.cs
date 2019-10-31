@@ -20,12 +20,12 @@ namespace first_xamarin_app
 
         void AddRedirect(object sender, EventArgs e)
         {
-            (sender as Button).Text = "Add is winning";
+            Navigation.PushAsync(new CreatePage());
         }
 
         void ViewRedirect(object sender, EventArgs e)
         {
-            (sender as Button).Text = "View is winning";
+            Navigation.PushAsync(new ViewPage());
         }
     }
 }
