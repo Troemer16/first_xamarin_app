@@ -5,11 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="first_xamarin_app.CreatePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Create Employees" TextColor="Black" FontSize="Large"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Row="1" Grid.Column="1">
+            <Entry Placeholder="Name"/>
+            <Entry Placeholder="Age"/>
+            <Entry Placeholder="Position"/>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>
