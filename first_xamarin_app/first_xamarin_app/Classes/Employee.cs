@@ -5,7 +5,6 @@ using SQLite;
 
 namespace first_xamarin_app.Classes
 {
-    [Table("Employees")]
     class Employee
     {
         [PrimaryKey, AutoIncrement]

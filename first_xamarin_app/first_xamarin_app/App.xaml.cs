@@ -24,11 +24,18 @@ namespace first_xamarin_app
 
             dbPath = filePath;
 
-            using (Stream source = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("DB/test.db"))
+            using (var source = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("first_xamarin_app.DB.test.db"))
             {
-                using (var destination = File.Create(dbPath))
+                using (FileStream destination = File.Create(dbPath))
                 {
-                    source.CopyTo(destination);
+                    try
+                    {
+                        source.CopyTo(destination);
+                    } catch (NullReferenceException e)
+                    {
+                        Console.Write(e.StackTrace);
+                    }
+                    
                 }
             }
         }

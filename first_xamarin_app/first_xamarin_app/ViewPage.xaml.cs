@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
+using first_xamarin_app.Classes;
 
 namespace first_xamarin_app
 {
@@ -15,6 +17,16 @@ namespace first_xamarin_app
         public ViewPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.dbPath))
+            {
+                List<Employee> employees = conn.Table<Employee>().ToList();
+            }
         }
     }
 }
