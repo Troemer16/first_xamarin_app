@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
@@ -23,6 +24,12 @@ namespace first_xamarin_app.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            string fileName = "employee.db";
+            string folderPath = Path.Combine(Environment.GetFolderPath(
+                Environment.SpecialFolder.Personal), "..", "Library");
+            string completePath = Path.Combine(folderPath, fileName);
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

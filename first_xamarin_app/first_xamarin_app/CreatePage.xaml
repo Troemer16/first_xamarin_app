@@ -17,10 +17,14 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
+        <Image Grid.RowSpan="2" Grid.ColumnSpan="3"
+               Source="new_employee_background.jpg"
+               HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="Fill"/>
+
         <StackLayout Grid.Row="1" Grid.Column="1">
-            <Entry Placeholder="Name"/>
-            <Entry Placeholder="Age"/>
-            <Entry Placeholder="Position"/>
+            <Entry x:Name="NameEntry" Placeholder="Name"/>
+            <Entry x:Name="AgeEntry" Placeholder="Age"/>
+            <Entry x:Name="PositionEntry" Placeholder="Position"/>
         </StackLayout>
     </Grid>
 </ContentPage>
