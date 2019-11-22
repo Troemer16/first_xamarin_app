@@ -26,6 +26,8 @@ namespace first_xamarin_app
             using (SQLiteConnection conn = new SQLiteConnection(App.dbPath))
             {
                 List<Employee> employees = conn.Table<Employee>().ToList();
+
+                EmployeesView.ItemsSource = employees;
             }
         }
     }

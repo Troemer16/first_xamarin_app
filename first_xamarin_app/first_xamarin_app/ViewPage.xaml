@@ -6,10 +6,13 @@
              mc:Ignorable="d"
              x:Class="first_xamarin_app.ViewPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="View Employees" TextColor="Black" FontSize="Large"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView x:Name="EmployeesView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding Position}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
