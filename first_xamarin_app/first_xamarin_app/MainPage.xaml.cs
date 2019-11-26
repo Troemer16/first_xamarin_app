@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
+using Xamarin.Essentials;
 
 namespace first_xamarin_app
 {
@@ -16,16 +18,6 @@ namespace first_xamarin_app
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        void AddRedirect(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new CreatePage());
-        }
-
-        void ViewRedirect(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ViewPage());
         }
     }
 }
