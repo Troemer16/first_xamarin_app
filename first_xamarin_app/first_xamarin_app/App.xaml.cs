@@ -10,7 +10,7 @@ namespace first_xamarin_app
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
