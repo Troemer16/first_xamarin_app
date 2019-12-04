@@ -30,7 +30,11 @@ namespace first_xamarin_app
 
             using(SQLiteConnection conn = new SQLiteConnection(App.dbPath))
             {
-
+                int rowsAdded = conn.Insert(newEmployee);
+                if(rowsAdded < 1)
+                {
+                    Console.WriteLine("Unable to add Employee");
+                }
             }
         }
     }

@@ -25,6 +25,7 @@
             <Entry x:Name="NameEntry" Placeholder="Name"/>
             <Entry x:Name="AgeEntry" Placeholder="Age"/>
             <Entry x:Name="PositionEntry" Placeholder="Position"/>
+            <Button x:Name="CreateButton" Text="Add Employee" Clicked="AddEmployeeButton"/>
         </StackLayout>
     </Grid>
 </ContentPage>
